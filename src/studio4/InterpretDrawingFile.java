@@ -20,5 +20,25 @@ public class InterpretDrawingFile {
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
 		
+		String shapeType = in.next();
+		int red = in.nextInt();
+		int green = in.nextInt();
+		int blue = in.nextInt();
+		boolean isFilled = in.nextBoolean();
+		double x = in.nextDouble();
+		double y = in.nextDouble();
+		double halfWidth = in.nextDouble();
+		double halfHeight = in.nextDouble();
+		
+		if (shapeType.equals("rectangle")) {
+			StdDraw.rectangle(x, y, halfWidth, halfHeight);
+		}
+		
+		if (shapeType.equals("triangle")) {
+		}
+		
 	}
+	
+	
+	
 }
